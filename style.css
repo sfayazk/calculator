@@ -1,53 +1,82 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
-
 *{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 body{
-    background-color: turquoise;
+    background-color: hsl(36, 26%, 81%);
     font-family: "Open Sans", sans-serif;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-h1{
-    text-align: center;
-    margin-top: 30px;
+#calculator{
+    background-color: black;
+    max-width: 500px;
+    border-radius: 25px;
+    background-color: (0, 0%, 15%);
 }
-
 .grid-container{
     display: grid;
-    width: 20vw;
-    margin: 50px auto;
-    height: 50vh;
-    align-content: center;
-    grid-template-columns: auto auto auto auto;
-    justify-content: center;
+    grid-template-columns: repeat(4, 1fr);
     gap: 5px;
-    
+    padding: 25px;
 }
 
 .item{
-    padding: 1.5rem;
-    border-radius: 5px;
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    background-color: hsl(0, 0%, 30%);
+    color: white;
+    border: none;
+    font-size: 36px;
+    font-weight: bold;
     cursor: pointer;
 }
 
 .item0{
-    grid-column: 1 / span 2;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    width: 200px;
+    border-radius: 50px;
+    text-align: start;
+    padding-left: 40px;
+    
 }
 
-.input{
-    grid-column: 1 / span 4;
-    height: 50px;
-    font-size: 24px;
-    border-radius: 5px;
+.operator{
+    background-color: #fe9605;
+    
 }
 
-.container{
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    /* border: 2px solid black; */
+.operator1{
+    background-color: #a5a5a5;
+    color: black;
+}
+
+input{
+    height: 100px;
+    width: 100%;
+    border: none;
+    border-radius: 25px 25px 0px 0px;
+    font-size: 3rem;
+    padding: 25px;
+    background-color: hsl(0, 0%, 30%);
+    color: white;
+    font-weight: bold;
+}
+
+.item:hover{
+    background-color:  hsl(0, 0%, 60%);
+}
+.operator1:hover{
+    background-color:  hsl(0, 0%, 30%);
+}
+.operator:hover{
+    background-color:  hsl(35, 99%, 70%);
 }
